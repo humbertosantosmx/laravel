@@ -44,7 +44,7 @@ trait ClientApiResponse
     public function ExistError($Response)
     {
         if (($Response->getStatusCode() != null)) {
-            return $this->CodeError($Response->getReasonPhrase());
+            return $this->CodeError($Response->getStatusCode());
         }
         return $Response;
     }
